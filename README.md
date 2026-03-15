@@ -1,5 +1,7 @@
 # discovery_datagojp
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 This project provides a set of scripts to fetch and process open data from the Japanese government's data portal, [data.go.jp](https://www.data.go.jp/data/en/).
 
 ## Features
