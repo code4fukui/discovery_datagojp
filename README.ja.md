@@ -1,29 +1,38 @@
 # discovery_datagojp
 
-このプロジェクトは、日本の政府の公開データポータル「DATA GO JP」のデータを収集し、整理・分析するためのものです。
+このプロジェクトは、日本政府の公開データポータル「DATA GO JP」からデータを収集し、整理・分析するためのものです。
 
 ## 機能
 
-- DATA GO JPのデータセットを収集し、CSVファイルに変換
-- データセットの情報（タイトル、URL、更新日、フォーマットなど）を抽出
-- データの分布やヒストグラムを生成
+- DATA GO JPのデータセットのメタデータと資源情報を CKAN API から取得
+- データセットの資源をフォーマット別(CSV、JSON、XML など)に個別のファイルに分離
+- データセットの資源情報をまとめたCSVファイルを生成
 
 ## 必要環境
 
-- Deno
-- Node.js (JavaScript処理に使用)
+- [Deno](https://deno.land/) - 現代的な JavaScript/TypeScriptランタイム
 
 ## 使い方
 
-1. リポジトリをクローンする
-2. `deno run fetch_ckan.js` を実行してデータセットを収集
-3. `deno run make_csv.js` を実行してCSVファイルを生成
-4. 生成されたCSVファイルをデータ分析に使用
+1. リポジトリをクローンする:
+```
+git clone https://github.com/username/discovery_datagojp.git
+```
+2. プロジェクトディレクトリに移動する:
+```
+cd discovery_datagojp
+```
+3. データ取得・処理スクリプトを実行する:
+```
+deno run --allow-net --allow-read --allow-write fetch_ckan.js
+deno run --allow-read --allow-write make_csv.js
+```
+これにより、データセットのメタデータがダウンロードされ、フォーマット別に分離され、リソース情報をまとめたCSVファイルが生成されます。
 
 ## データ・API
 
-- [DATA GO JP](https://www.data.go.jp/)
+このプロジェクトでは[DATA GO JP CKAN API](https://www.data.go.jp/data/en/api/)を使用して、日本政府の公開データポータルからデータを取得しています。
 
 ## ライセンス
 
-このプロジェクトは MIT ライセンスの下で公開されています。
+このプロジェクトは [MIT ライセンス](LICENSE)の下で公開されています。

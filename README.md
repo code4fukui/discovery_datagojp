@@ -32,4 +32,4 @@ This will download the dataset metadata, separate the resources by format, and g
 This project uses the [data.go.jp CKAN API](https://www.data.go.jp/data/en/api/) to fetch open data from the Japanese government's data portal.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+MIT License — see [LICENSE](LICENSE).
