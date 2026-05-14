@@ -3,3 +3,8 @@ test/
 data/data_go_jp/
 data/data_go_jp.csv
 data/data_go_jp.json
+
+# auto-added by meta-ops
+node_modules/
+.DS_Store
+Thumbs.db
